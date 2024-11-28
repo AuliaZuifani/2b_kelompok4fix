@@ -1,3 +1,5 @@
+<?php require_once '../public/header.php'; ?>
+<?php require_once '../public/navbar.php'; ?>
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div>
         <h2 class="text-center mb-4">Tambah Penerbit Baru</h2>
@@ -26,3 +28,4 @@
         </form>
     </div>
 </div>
+<?php require_once '../public/footer.php'; ?>

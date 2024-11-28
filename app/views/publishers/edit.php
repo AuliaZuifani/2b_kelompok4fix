@@ -1,4 +1,6 @@
 <!-- app/views/publiser/edit.php -->
+<?php require_once '../public/header.php'; ?>
+<?php require_once '../public/navbar.php'; ?>
 <div class="container mt-5">
     <h2 class="text-center mb-4">Edit Penerbit</h2>
     <form action="/publiser/update/<?php echo $publiser['id_penerbit']; ?>" method="POST">
@@ -23,5 +25,5 @@
         <a href="/publiser/index" class="btn btn-secondary btn-sm">Kembali ke Daftar Buku</a>
     </div>
     </form>
-
 </div>
+<?php require_once '../public/footer.php'; ?>
