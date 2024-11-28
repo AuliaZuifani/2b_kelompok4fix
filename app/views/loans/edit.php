@@ -4,43 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Peminjaman Buku</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<?php require_once '../public/header.php'; ?>
-<?php require_once '../public/navbar.php'; ?>
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Edit Peminjaman Buku</h2>
+<div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; background-color: #f9f9f9;">
+    <h2 style="text-align: center;">Edit Peminjaman Buku</h2>
     <form action="/loans/update/<?php echo $loan['id_pinjam']; ?>" method="POST">
-        <table class="table table-bordered" style="max-width: 600px; margin: 0 auto;">
-            <tr>
-                <td><label for="buku_yang_dipinjam">Buku yang Dipinjam:</label></td>
-                <td><input type="text" id="buku_yang_dipinjam" name="buku_yang_dipinjam" value="<?php echo htmlspecialchars($loan['buku_yang_dipinjam']); ?>" required class="form-control"></td>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr style="border-bottom: 1px solid #000;">
+                <td style="padding: 10px; text-align: right; width: 30%;">Buku yang Dipinjam:</td>
+                <td style="padding: 10px;"><input type="text" id="buku_yang_dipinjam" name="buku_yang_dipinjam" value="<?php echo htmlspecialchars($loan['buku_yang_dipinjam']); ?>" required style="width: 100%; padding: 8px; border: 1px solid #000;"></td>
             </tr>
-            <tr>
-                <td><label for="peminjam">Nama Peminjam:</label></td>
-                <td><input type="text" id="peminjam" name="peminjam" value="<?php echo htmlspecialchars($loan['peminjam']); ?>" required class="form-control"></td>
+            <tr style="border-bottom: 1px solid #000;">
+                <td style="padding: 10px; text-align: right;">Nama Peminjam:</td>
+                <td style="padding: 10px;"><input type="text" id="peminjam" name="peminjam" value="<?php echo htmlspecialchars($loan['peminjam']); ?>" required style="width: 100%; padding: 8px; border: 1px solid #000;"></td>
             </tr>
-            <tr>
-                <td><label for="tanggal_pinjam">Tanggal Pinjam:</label></td>
-                <td><input type="date" id="tanggal_pinjam" name="tanggal_pinjam" value="<?php echo htmlspecialchars($loan['tanggal_pinjam']); ?>" required class="form-control"></td>
+            <tr style="border-bottom: 1px solid #000;">
+                <td style="padding: 10px; text-align: right;">Tanggal Pinjam:</td>
+                <td style="padding: 10px;"><input type="date" id="tanggal_pinjam" name="tanggal_pinjam" value="<?php echo htmlspecialchars($loan['tanggal_pinjam']); ?>" required style="width: 100%; padding: 8px; border: 1px solid #000;"></td>
             </tr>
-            <tr>
-                <td><label for="tanggal_kembali">Tanggal Kembali:</label></td>
-                <td><input type="date" id="tanggal_kembali" name="tanggal_kembali" value="<?php echo htmlspecialchars($loan['tanggal_kembali']); ?>" class="form-control"></td>
+            <tr style="border-bottom: 1px solid #000;">
+                <td style="padding: 10px; text-align: right;">Tanggal Kembali:</td>
+                <td style="padding: 10px;"><input type="date" id="tanggal_kembali" name="tanggal_kembali" value="<?php echo htmlspecialchars($loan['tanggal_kembali']); ?>" style="width: 100%; padding: 8px; border: 1px solid #000;"></td>
             </tr>
-           
         </table>
 
         <!-- Membungkus tombol dengan div untuk menempatkan di tengah -->
-        <div class="d-flex flex-column align-items-center mt-4">
-            <button type="submit" class="btn btn-warning btn-sm mb-2">Update</button>
-            <a href="/loans/index" class="btn btn-secondary btn-sm">Back to List</a>
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit" style="padding: 8px 16px; border: 1px solid #000; background: none; cursor: pointer;">Update</button>
+            <a href="/loans/index" style="padding: 8px 16px; border: 1px solid #000; text-decoration: none; background: none; cursor: pointer; margin-left: 10px;">Back to List</a>
         </div>
     </form>
 </div>
 
-<?php require_once '../public/footer.php'; ?>
 </body>
 </html>
